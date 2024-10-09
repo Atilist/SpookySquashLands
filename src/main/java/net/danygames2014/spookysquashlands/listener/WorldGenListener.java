@@ -1,5 +1,6 @@
 package net.danygames2014.spookysquashlands.listener;
 
+import net.danygames2014.spookysquashlands.feature.BushFeature;
 import net.danygames2014.spookysquashlands.feature.HugePumpkinFeature;
 import net.danygames2014.spookysquashlands.feature.LonelyOakTreeFeature;
 import net.mine_diver.unsafeevents.listener.EventListener;
@@ -45,6 +46,7 @@ public class WorldGenListener {
         spookyBuilder.fogColor(0xFFFFFFFF);
         spookyBuilder.feature(new LeveledScatterFeature(new HugePumpkinFeature(), 1));
         spookyBuilder.feature(new LeveledScatterFeature(new LonelyOakTreeFeature(), 1));
+        spookyBuilder.feature(new LeveledScatterFeature(new BushFeature(), 1));
         spookyBiomes[1] = spookyBuilder.build();
 
         // Spooky Forest

@@ -31,6 +31,6 @@ public class LonelyOakTreeFeature extends Feature {
                 }
             }
         }
-        return false;
+        return true;
     }
 }
