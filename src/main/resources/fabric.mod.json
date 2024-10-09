@@ -1,16 +1,16 @@
 {
   "schemaVersion": 1,
-  "id": "template",
+  "id": "spookysquashlands",
   "version": "${version}",
 
-  "name": "Template",
+  "name": "Spooky Squash Lands",
   "description": "",
   "authors": [
-    "DanyGames2014"
+    "Atilist, DanyGames2014"
   ],
 
   "license": "MIT",
-  "icon": "assets/template/icon.png",
+  "icon": "assets/spookysquashlands/icon.png",
 
   "environment": "*",
   "entrypoints": {
