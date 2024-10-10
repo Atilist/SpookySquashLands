@@ -74,9 +74,9 @@ public class WorldGenListener {
     public void registerRegions(BiomeProviderRegisterEvent event) {
         // Simple climate provider with biomes by temperature
         ClimateBiomeProvider provider = new ClimateBiomeProvider();
-        provider.addBiome(spookyBiomes[0], 0.0F, 0.35F, 0, 1);
-        provider.addBiome(spookyBiomes[1], 0.35F, 0.7F, 0, 1);
-        provider.addBiome(spookyBiomes[2], 0.7F, 0.95F, 0, 1);
+        provider.addBiome(spookyBiomes[0], 0.0F, 0.4F, 0, 1);
+        provider.addBiome(spookyBiomes[1], 0.4F, 0.75F, 0, 1);
+        provider.addBiome(spookyBiomes[2], 0.75F, 0.95F, 0, 1);
         provider.addBiome(spookyBiomes[3], 0.95F, 1.0F, 0, 1);
 
         BiomeAPI.addOverworldBiomeProvider(StationAPI.NAMESPACE.id("spooky_provider"), provider);

@@ -23,49 +23,28 @@ public class LonelyOakTreeFeature extends Feature {
             world.setBlock(x, offsetY, z, Block.LOG.id);
         }
         placeLeaves(world, random, x, treeHeight, z);
-        for (int i = 0; i < 2 + random.nextInt(6); i++) {
-            int branchX = x + random.nextInt(9) - 4;
+        for (int i = 0; i < 6 + random.nextInt(12); i++) {
+            int branchX = x + random.nextInt(17) - 8;
             int branchY = treeHeight + random.nextInt(9) - 4;
-            int branchZ = z + random.nextInt(9) - 4;
-            int branchBegin = y + random.nextInt(treeHeight - y);
-            // Approach X
-            int startX;
-            int endX;
-            if (branchX > x) {
-                startX = x;
-                endX = branchX;
-            } else {
-                startX = branchX;
-                endX = x;
-            }
-            for (int j = startX; j <= endX; j++) {
-                world.setBlock(j, branchBegin, z, Block.LOG.id);
-            }
-            // Approach Z
-            int startZ;
-            int endZ;
-            if (branchZ > z) {
-                startZ = z;
-                endZ = branchZ;
-            } else {
-                startZ = branchZ;
-                endZ = z;
-            }
-            for (int j = startZ; j <= endZ; j++) {
-                world.setBlock(branchX, branchBegin, j, Block.LOG.id);
-            }
-            // Approach Y
-            int startY;
-            int endY;
-            if (branchY > branchBegin) {
-                startY = branchBegin;
-                endY = branchY;
-            } else {
-                startY = branchY;
-                endY = branchBegin;
-            }
-            for (int j = startY; j <= endY; j++) {
-                world.setBlock(branchX, j, branchZ, Block.LOG.id);
+            int branchZ = z + random.nextInt(17) - 8;
+            int currentX = x, currentY = y + random.nextInt(treeHeight - y), currentZ = z;
+            while (currentX != branchX || currentY != branchY || currentZ != branchZ) {
+                world.setBlock(currentX, currentY, currentZ, Block.LOG.id);
+                if (currentX > branchX) {
+                    currentX--;
+                } else if (currentX < branchX) {
+                    currentX++;
+                }
+                if (currentY > branchY) {
+                    currentY--;
+                } else if (currentY < branchY) {
+                    currentY++;
+                }
+                if (currentZ > branchZ) {
+                    currentZ--;
+                } else if (currentZ < branchZ) {
+                    currentZ++;
+                }
             }
             // Place leaves at branch end
             placeLeaves(world, random, branchX, branchY, branchZ);
@@ -78,6 +57,9 @@ public class LonelyOakTreeFeature extends Feature {
             for (int offsetY = y - 2; offsetY <= y + 2; offsetY++) {
                 for (int offsetZ = z - 2; offsetZ <= z + 2; offsetZ++) {
                     if (world.getBlockId(offsetX, offsetY, offsetZ) == 0) {
+                        if ((offsetX == x - 2 || offsetX == x + 2) && (offsetY == y - 2 || offsetY == y + 2) && (offsetZ == z - 2 || offsetZ == z + 2)) {
+                            continue;
+                        }
                         world.setBlock(offsetX, offsetY, offsetZ, Block.LEAVES.id);
                     }
                 }
