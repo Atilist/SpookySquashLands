@@ -1,0 +1,9 @@
+accessWidener v2 named
+
+accessible method net/minecraft/world/gen/feature/LargeOakTreeFeature canPlace ()Z
+accessible method net/minecraft/world/gen/feature/LargeOakTreeFeature tryBranch ([I[I)I
+accessible field net/minecraft/world/gen/feature/LargeOakTreeFeature origin [I
+accessible field net/minecraft/world/gen/feature/LargeOakTreeFeature height I
+accessible field net/minecraft/world/gen/feature/LargeOakTreeFeature world Lnet/minecraft/world/World;
+accessible field net/minecraft/world/gen/feature/LargeOakTreeFeature random Ljava/util/Random;
+accessible field net/minecraft/world/gen/feature/LargeOakTreeFeature maxTrunkHeight I
