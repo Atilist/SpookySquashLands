@@ -53,6 +53,8 @@ public class WorldGenListener {
         spookyBuilder.leavesColor(0xFF353735);
         spookyBuilder.grassColor(0xFF353735);
         spookyBuilder.fogColor(0xFF202020);
+        spookyBuilder.noDimensionFeatures();
+        spookyBuilder.overworldOres();
         spookyBuilder.feature(new HeightScatterFeature(new SpookyLargeTree(), 2));
         spookyBuilder.feature(new HeightScatterFeature(new SpikyBushFeature(), 2));
         spookyBuilder.feature(new GrassFeature(0, 16));

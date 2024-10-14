@@ -1,7 +1,9 @@
 package net.danygames2014.spookysquashlands.feature;
 
 import net.minecraft.block.Block;
+import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.LargeOakTreeFeature;
+import net.modificationstation.stationapi.api.util.math.Direction;
 
 public class SpookyLargeTree extends LargeOakTreeFeature {
     @Override
@@ -49,9 +51,9 @@ public class SpookyLargeTree extends LargeOakTreeFeature {
                 double var15 = Math.sqrt(Math.pow((double) Math.abs(var12) + 0.5, 2.0) + Math.pow((double) Math.abs(var13) + 0.5, 2.0));
                 if (!(var15 > (double) shape)) {
                     placePos[var9] = genPos[var9] + var13;
-                    int var14 = this.world.getBlockId(placePos[0], placePos[1], placePos[2]);
-                    if (var14 == 0 || var14 == 18) {
-                        if (random.nextInt(40) == 0) {
+                    int placePosBlockId = this.world.getBlockId(placePos[0], placePos[1], placePos[2]);
+                    if (placePosBlockId == 0 || placePosBlockId == 18) {
+                        if (random.nextInt(20) == 0 && airBlocksAround(x,y,z,world) > 2) {
                             this.world.setBlockWithoutNotifyingNeighbors(placePos[0], placePos[1], placePos[2], Block.COBWEB.id);
                         } else {
                             this.world.setBlockWithoutNotifyingNeighbors(placePos[0], placePos[1], placePos[2], clusterBlock);
@@ -62,5 +64,17 @@ public class SpookyLargeTree extends LargeOakTreeFeature {
                 var13++;
             }
         }
+    }
+
+    public int airBlocksAround(int x, int y, int z, World world) {
+        int airBlocks = 0;
+
+        for (var dir : Direction.values()) {
+            if (world.getBlockState(x + dir.getOffsetX(), y + dir.getOffsetY(), z + dir.getOffsetZ()).isAir()) {
+                airBlocks++;
+            }
+        }
+
+        return airBlocks;
     }
 }
