@@ -15,7 +15,9 @@
   "environment": "*",
   "entrypoints": {
     "stationapi:event_bus": [
-      "net.danygames2014.spookysquashlands.listener.WorldGenListener"
+      "net.danygames2014.spookysquashlands.SpookySquashLands",
+      "net.danygames2014.spookysquashlands.listener.WorldGenListener",
+      "net.danygames2014.spookysquashlands.listener.EntityListener"
     ],
     "stationapi:event_bus_client": [
     ],

@@ -1,5 +1,6 @@
 package net.danygames2014.spookysquashlands.listener;
 
+import net.danygames2014.spookysquashlands.entity.SpookyScarySkeletonEntity;
 import net.danygames2014.spookysquashlands.feature.*;
 import net.mine_diver.unsafeevents.listener.EventListener;
 import net.minecraft.block.Block;
@@ -55,6 +56,7 @@ public class WorldGenListener {
         spookyBuilder.fogColor(0xFF202020);
         spookyBuilder.noDimensionFeatures();
         spookyBuilder.overworldOres();
+        spookyBuilder.hostileEntity(SpookyScarySkeletonEntity.class, 5);
         spookyBuilder.feature(new HeightScatterFeature(new SpookyLargeTree(), 2));
         spookyBuilder.feature(new HeightScatterFeature(new SpikyBushFeature(), 2));
         spookyBuilder.feature(new GrassFeature(0, 16));
