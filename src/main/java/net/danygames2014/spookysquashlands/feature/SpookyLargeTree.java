@@ -2,8 +2,6 @@ package net.danygames2014.spookysquashlands.feature;
 
 import net.minecraft.world.gen.feature.LargeOakTreeFeature;
 
-import javax.sound.midi.Soundbank;
-
 public class SpookyLargeTree extends LargeOakTreeFeature {
     @Override
     public boolean canPlace() {

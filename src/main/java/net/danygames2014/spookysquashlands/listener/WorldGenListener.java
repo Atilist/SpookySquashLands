@@ -18,7 +18,7 @@ import net.modificationstation.stationapi.api.worldgen.surface.SurfaceRule;
 
 public class WorldGenListener {
     private Biome[] spookyBiomes;
-    
+
     @EventListener
     public void registerBiomes(BiomeRegisterEvent event) {
         spookyBiomes = new Biome[4];
