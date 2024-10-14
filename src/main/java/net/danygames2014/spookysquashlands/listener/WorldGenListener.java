@@ -29,7 +29,7 @@ public class WorldGenListener {
 
         BiomeBuilder spookyBuilder;
         spookyBuilder = BiomeBuilder.start("Spooky Tundra");
-        spookyBuilder.height(64, 128);
+        spookyBuilder.height(48, 128);
         spookyBuilder.snow(true);
         spookyBuilder.leavesColor(0xFF3A976D);
         spookyBuilder.grassColor(0xFF3A976D);
@@ -39,7 +39,7 @@ public class WorldGenListener {
 
         // Spooky Plains
         spookyBuilder = BiomeBuilder.start("Spooky Plains");
-        spookyBuilder.height(64, 128);
+        spookyBuilder.height(48, 128);
         spookyBuilder.leavesColor(0xFFBEBA30);
         spookyBuilder.grassColor(0xFFBEBA30);
         spookyBuilder.fogColor(0xFFFFFFFF);
@@ -50,7 +50,7 @@ public class WorldGenListener {
 
         // Spooky Forest
         spookyBuilder = BiomeBuilder.start("Spooky Forest");
-        spookyBuilder.height(64, 80);
+        spookyBuilder.height(48, 80);
         spookyBuilder.leavesColor(0xFF353735);
         spookyBuilder.grassColor(0xFF353735);
         spookyBuilder.fogColor(0xFF202020);
@@ -65,7 +65,7 @@ public class WorldGenListener {
 
         // Spooky Jungle
         spookyBuilder = BiomeBuilder.start("Spooky Jungle");
-        spookyBuilder.height(64, 128);
+        spookyBuilder.height(48, 128);
         spookyBuilder.leavesColor(0xFF3A9719);
         spookyBuilder.grassColor(0xFF3A9719);
         spookyBuilder.fogColor(0xFFFFFFFF);
