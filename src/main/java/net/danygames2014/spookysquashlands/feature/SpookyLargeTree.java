@@ -1,5 +1,6 @@
 package net.danygames2014.spookysquashlands.feature;
 
+import net.minecraft.block.Block;
 import net.minecraft.world.gen.feature.LargeOakTreeFeature;
 
 public class SpookyLargeTree extends LargeOakTreeFeature {
@@ -22,6 +23,44 @@ public class SpookyLargeTree extends LargeOakTreeFeature {
             }
         } else {
             return false;
+        }
+    }
+
+    @Override
+    public void placeCluster(int x, int y, int z, float shape, byte majorAxis, int clusterBlock) {
+        int var7 = (int) ((double) shape + 0.618);
+        byte var8 = MINOR_AXES[majorAxis];
+        byte var9 = MINOR_AXES[majorAxis + 3];
+        int[] genPos = new int[]{x, y, z};
+        int[] placePos = new int[]{0, 0, 0};
+        int var12 = -var7;
+        int var13 = -var7;
+
+        label32:
+        for (placePos[majorAxis] = genPos[majorAxis]; var12 <= var7; ++var12) {
+            placePos[var8] = genPos[var8] + var12;
+            var13 = -var7;
+
+            while (true) {
+                if (var13 > var7) {
+                    continue label32;
+                }
+
+                double var15 = Math.sqrt(Math.pow((double) Math.abs(var12) + 0.5, 2.0) + Math.pow((double) Math.abs(var13) + 0.5, 2.0));
+                if (!(var15 > (double) shape)) {
+                    placePos[var9] = genPos[var9] + var13;
+                    int var14 = this.world.getBlockId(placePos[0], placePos[1], placePos[2]);
+                    if (var14 == 0 || var14 == 18) {
+                        if (random.nextInt(40) == 0) {
+                            this.world.setBlockWithoutNotifyingNeighbors(placePos[0], placePos[1], placePos[2], Block.COBWEB.id);
+                        } else {
+                            this.world.setBlockWithoutNotifyingNeighbors(placePos[0], placePos[1], placePos[2], clusterBlock);
+                        }
+
+                    }
+                }
+                var13++;
+            }
         }
     }
 }

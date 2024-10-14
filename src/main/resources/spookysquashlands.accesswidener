@@ -7,3 +7,5 @@ accessible field net/minecraft/world/gen/feature/LargeOakTreeFeature height I
 accessible field net/minecraft/world/gen/feature/LargeOakTreeFeature world Lnet/minecraft/world/World;
 accessible field net/minecraft/world/gen/feature/LargeOakTreeFeature random Ljava/util/Random;
 accessible field net/minecraft/world/gen/feature/LargeOakTreeFeature maxTrunkHeight I
+accessible field net/minecraft/world/gen/feature/LargeOakTreeFeature MINOR_AXES [B
+accessible method net/minecraft/world/gen/feature/LargeOakTreeFeature placeCluster (IIIFBI)V
