@@ -27,14 +27,14 @@ public class BlockListener {
 
     @EventListener
     public void registerBlocks(BlockRegistryEvent event) {
-        giantPumpkinTop = new GiantPumpkinTopBlock(Identifier.of("giant_pumpkin_top"), Material.PUMPKIN).setHardness(1.5F).setSoundGroup(Block.WOOD_SOUND_GROUP);
-        giantPumpkinMiddle = new GiantPumpkinMiddleBlock(Identifier.of("giant_pumpkin_middle"), Material.PUMPKIN).setHardness(1.5F).setSoundGroup(Block.WOOD_SOUND_GROUP);
-        giantPumpkinBottom = new GiantPumpkinBottomBlock(Identifier.of("giant_pumpkin_bottom"), Material.PUMPKIN).setHardness(1.5F).setSoundGroup(Block.WOOD_SOUND_GROUP);
+        giantPumpkinTop = new GiantPumpkinTopBlock(Identifier.of(NAMESPACE, "giant_pumpkin_top"), Material.PUMPKIN).setHardness(1.5F).setSoundGroup(Block.WOOD_SOUND_GROUP);
+        giantPumpkinMiddle = new GiantPumpkinMiddleBlock(Identifier.of(NAMESPACE, "giant_pumpkin_middle"), Material.PUMPKIN).setHardness(1.5F).setSoundGroup(Block.WOOD_SOUND_GROUP);
+        giantPumpkinBottom = new GiantPumpkinBottomBlock(Identifier.of(NAMESPACE, "giant_pumpkin_bottom"), Material.PUMPKIN).setHardness(1.5F).setSoundGroup(Block.WOOD_SOUND_GROUP);
 
-        spikePumpkin = new SpikePumpkinBlock(Identifier.of("spike_pumpkin"), Material.PUMPKIN).setHardness(1.5F).setSoundGroup(Block.WOOD_SOUND_GROUP);
+        spikePumpkin = new SpikePumpkinBlock(Identifier.of(NAMESPACE, "spike_pumpkin"), Material.PUMPKIN).setHardness(1.5F).setSoundGroup(Block.WOOD_SOUND_GROUP);
 
-        solidIce = new SolidIceBlock(Identifier.of("solid_ice"), Material.STONE).setHardness(1.5F).setSoundGroup(Block.GLASS_SOUND_GROUP);
+        solidIce = new SolidIceBlock(Identifier.of(NAMESPACE, "solid_ice"), Material.STONE).setHardness(1.5F).setSoundGroup(Block.GLASS_SOUND_GROUP);
 
-        frozenPumpkin = new FrozenPumpkinBlock(Identifier.of("frozen_pumpkin"), Material.PUMPKIN).setHardness(1.5F).setSoundGroup(Block.WOOD_SOUND_GROUP);
+        frozenPumpkin = new FrozenPumpkinBlock(Identifier.of(NAMESPACE, "frozen_pumpkin"), Material.PUMPKIN).setHardness(1.5F).setSoundGroup(Block.WOOD_SOUND_GROUP);
     }
 }
