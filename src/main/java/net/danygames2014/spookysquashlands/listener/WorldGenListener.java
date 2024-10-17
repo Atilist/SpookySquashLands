@@ -73,7 +73,7 @@ public class WorldGenListener {
         spookyBuilder.leavesColor(0xFF3A9719);
         spookyBuilder.grassColor(0xFF3A9719);
         spookyBuilder.fogColor(0xFFFFFFFF);
-        spookyBuilder.feature(new LargeOakTreeFeature());
+        spookyBuilder.feature(new HeightScatterFeature(new JungleTreeFeature(), 2));
         spookyBiomes[3] = spookyBuilder.build();
     }
 

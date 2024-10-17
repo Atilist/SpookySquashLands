@@ -9,7 +9,7 @@ import java.util.Random;
 public class BushFeature extends Feature {
     @Override
     public boolean generate(World world, Random random, int x, int y, int z) {
-        if (y < 64) {
+        if (y < 65) {
             return false;
         }
         if (random.nextInt(2) != 0) {
