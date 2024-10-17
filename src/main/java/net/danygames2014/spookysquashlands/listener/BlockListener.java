@@ -22,6 +22,8 @@ public class BlockListener {
 
     public static Block frozenPumpkin;
 
+    public static Block junglePumpkin;
+
     @Entrypoint.Namespace
     public static final Namespace NAMESPACE = Null.get();
 
@@ -36,5 +38,7 @@ public class BlockListener {
         solidIce = new SolidIceBlock(Identifier.of(NAMESPACE, "solid_ice"), Material.STONE).setHardness(1.5F).setSoundGroup(Block.GLASS_SOUND_GROUP);
 
         frozenPumpkin = new FrozenPumpkinBlock(Identifier.of(NAMESPACE, "frozen_pumpkin"), Material.PUMPKIN).setHardness(1.5F).setSoundGroup(Block.WOOD_SOUND_GROUP);
+
+        junglePumpkin = new JunglePumpkinBlock(Identifier.of(NAMESPACE, "jungle_pumpkin"), Material.PUMPKIN).setHardness(1.5F).setSoundGroup(Block.WOOD_SOUND_GROUP);
     }
 }
