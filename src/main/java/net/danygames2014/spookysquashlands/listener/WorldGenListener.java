@@ -6,6 +6,7 @@ import net.mine_diver.unsafeevents.listener.EventListener;
 import net.minecraft.block.Block;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.feature.LargeOakTreeFeature;
+import net.minecraft.world.gen.feature.PlantPatchFeature;
 import net.modificationstation.stationapi.api.StationAPI;
 import net.modificationstation.stationapi.api.event.world.biome.BiomeRegisterEvent;
 import net.modificationstation.stationapi.api.event.worldgen.biome.BiomeProviderRegisterEvent;
@@ -61,6 +62,7 @@ public class WorldGenListener {
         spookyBuilder.feature(new HeightScatterFeature(new SpikyBushFeature(), 2));
         spookyBuilder.feature(new GrassFeature(0, 16));
         spookyBuilder.feature(new GrassFeature(1, 128));
+        spookyBuilder.feature(new HeightScatterFeature(new SpikePumpkinFeature(), 1));
         spookyBiomes[2] = spookyBuilder.build();
 
         // Spooky Jungle

@@ -12,7 +12,7 @@ public class GiantPumpkinFeature extends Feature {
         if (y < 64) {
             return false;
         }
-        if (random.nextInt(4) != 0) {
+        if (random.nextInt(8) != 0) {
             return false;
         }
         if (world.getBlockId(x, y - 1, z) == 0) {

@@ -46,6 +46,10 @@ public class TextureListener {
         giantPumpkinBottomBottomLeft = getBlockTexture("block/giant_pumpkin_bottom_bottom_left");
         giantPumpkinBottomBottomMiddle = getBlockTexture("block/giant_pumpkin_bottom_bottom_middle");
         giantPumpkinBottomBottomRight = getBlockTexture("block/giant_pumpkin_bottom_bottom_right");
+
+        spikePumpkinTop = getBlockTexture("block/spike_pumpkin_top");
+        spikePumpkinSide = getBlockTexture("block/spike_pumpkin_side");
+        spikePumpkinBottom = getBlockTexture("block/spike_pumpkin_bottom");
     }
 
     public int getBlockTexture(String path) {
@@ -83,5 +87,9 @@ public class TextureListener {
             giantPumpkinBottomMiddleRight,
             giantPumpkinBottomBottomLeft,
             giantPumpkinBottomBottomMiddle,
-            giantPumpkinBottomBottomRight;
+            giantPumpkinBottomBottomRight,
+
+            spikePumpkinTop,
+            spikePumpkinSide,
+            spikePumpkinBottom;
 }
