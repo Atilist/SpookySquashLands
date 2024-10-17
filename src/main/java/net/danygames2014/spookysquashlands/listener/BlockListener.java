@@ -1,9 +1,6 @@
 package net.danygames2014.spookysquashlands.listener;
 
-import net.danygames2014.spookysquashlands.block.GiantPumpkinBottomBlock;
-import net.danygames2014.spookysquashlands.block.GiantPumpkinMiddleBlock;
-import net.danygames2014.spookysquashlands.block.GiantPumpkinTopBlock;
-import net.danygames2014.spookysquashlands.block.SpikePumpkinBlock;
+import net.danygames2014.spookysquashlands.block.*;
 import net.mine_diver.unsafeevents.listener.EventListener;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -21,6 +18,10 @@ public class BlockListener {
 
     public static Block spikePumpkin;
 
+    public static Block solidIce;
+
+    public static Block frozenPumpkin;
+
     @Entrypoint.Namespace
     public static final Namespace NAMESPACE = Null.get();
 
@@ -31,5 +32,9 @@ public class BlockListener {
         giantPumpkinBottom = new GiantPumpkinBottomBlock(Identifier.of("giant_pumpkin_bottom"), Material.PUMPKIN).setHardness(1.5F).setSoundGroup(Block.WOOD_SOUND_GROUP);
 
         spikePumpkin = new SpikePumpkinBlock(Identifier.of("spike_pumpkin"), Material.PUMPKIN).setHardness(1.5F).setSoundGroup(Block.WOOD_SOUND_GROUP);
+
+        solidIce = new SolidIceBlock(Identifier.of("solid_ice"), Material.STONE).setHardness(1.5F).setSoundGroup(Block.GLASS_SOUND_GROUP);
+
+        frozenPumpkin = new FrozenPumpkinBlock(Identifier.of("frozen_pumpkin"), Material.PUMPKIN).setHardness(1.5F).setSoundGroup(Block.WOOD_SOUND_GROUP);
     }
 }

@@ -26,7 +26,8 @@ public class WorldGenListener {
         spookyBiomes = new Biome[4];
 
         // Spooky Tundra
-        SurfaceRule tundraSurface = SurfaceBuilder.start(Block.SNOW_BLOCK).replace(Block.GRASS_BLOCK).build();
+        SurfaceRule tundraSurface = SurfaceBuilder.start(BlockListener.solidIce).replace(Block.GRASS_BLOCK).build();
+        SurfaceRule tundraFilling = SurfaceBuilder.start(BlockListener.solidIce).replace(Block.STONE).build();
 
         BiomeBuilder spookyBuilder;
         spookyBuilder = BiomeBuilder.start("Spooky Tundra");
@@ -36,6 +37,9 @@ public class WorldGenListener {
         spookyBuilder.grassColor(0xFF3A976D);
         spookyBuilder.fogColor(0xFFFFFFFF);
         spookyBuilder.surfaceRule(tundraSurface);
+        spookyBuilder.surfaceRule(tundraFilling);
+        spookyBuilder.feature(new HeightScatterFeature(new GlacierFeature(), 1));
+        spookyBuilder.feature(new HeightScatterFeature(new FrozenPumpkinFeature(), 1));
         spookyBiomes[0] = spookyBuilder.build();
 
         // Spooky Plains
@@ -44,9 +48,9 @@ public class WorldGenListener {
         spookyBuilder.leavesColor(0xFFBEBA30);
         spookyBuilder.grassColor(0xFFBEBA30);
         spookyBuilder.fogColor(0xFFFFFFFF);
-        spookyBuilder.feature(new LeveledScatterFeature(new GiantPumpkinFeature(), 1));
-        spookyBuilder.feature(new LeveledScatterFeature(new LonelyOakTreeFeature(), 1));
-        spookyBuilder.feature(new LeveledScatterFeature(new BushFeature(), 1));
+        spookyBuilder.feature(new HeightScatterFeature(new GiantPumpkinFeature(), 1));
+        spookyBuilder.feature(new HeightScatterFeature(new LonelyOakTreeFeature(), 1));
+        spookyBuilder.feature(new HeightScatterFeature(new BushFeature(), 1));
         spookyBiomes[1] = spookyBuilder.build();
 
         // Spooky Forest

@@ -50,6 +50,12 @@ public class TextureListener {
         spikePumpkinTop = getBlockTexture("block/spike_pumpkin_top");
         spikePumpkinSide = getBlockTexture("block/spike_pumpkin_side");
         spikePumpkinBottom = getBlockTexture("block/spike_pumpkin_bottom");
+
+        solidIce = getBlockTexture("block/solid_ice");
+
+        frozenPumpkinTop = getBlockTexture("block/frozen_pumpkin_top");
+        frozenPumpkinSide = getBlockTexture("block/frozen_pumpkin_side");
+        frozenPumpkinBottom = getBlockTexture("block/frozen_pumpkin_bottom");
     }
 
     public int getBlockTexture(String path) {
@@ -91,5 +97,11 @@ public class TextureListener {
 
             spikePumpkinTop,
             spikePumpkinSide,
-            spikePumpkinBottom;
+            spikePumpkinBottom,
+
+            solidIce,
+
+            frozenPumpkinTop,
+            frozenPumpkinSide,
+            frozenPumpkinBottom;
 }
