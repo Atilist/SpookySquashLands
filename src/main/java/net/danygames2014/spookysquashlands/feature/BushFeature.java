@@ -15,7 +15,7 @@ public class BushFeature extends Feature {
         if (random.nextInt(2) != 0) {
             return false;
         }
-        if (world.getBlockId(x, y - 1, z) == 0) {
+        if (world.getBlockId(x, y - 1, z) == 0 || world.getBlockId(x, y - 1, z) == Block.ICE.id || world.getBlockId(x, y - 1, z) == Block.LEAVES.id) {
             return false;
         }
         for (int offsetX = x - 1 - random.nextInt(4); offsetX <= x + 1 + random.nextInt(4); offsetX++) {

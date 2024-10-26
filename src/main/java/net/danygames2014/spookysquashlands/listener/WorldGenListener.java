@@ -5,7 +5,6 @@ import net.danygames2014.spookysquashlands.feature.*;
 import net.mine_diver.unsafeevents.listener.EventListener;
 import net.minecraft.block.Block;
 import net.minecraft.world.biome.Biome;
-import net.minecraft.world.gen.feature.LargeOakTreeFeature;
 import net.modificationstation.stationapi.api.StationAPI;
 import net.modificationstation.stationapi.api.event.world.biome.BiomeRegisterEvent;
 import net.modificationstation.stationapi.api.event.worldgen.biome.BiomeProviderRegisterEvent;

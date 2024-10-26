@@ -12,7 +12,7 @@ public class JungleTreeFeature extends Feature {
         if (y < 65) {
             return false;
         }
-        if (world.getBlockId(x, y - 1, z) == 0 || world.getBlockId(x, y - 1, z) == Block.LEAVES.id) {
+        if (world.getBlockId(x, y - 1, z) == 0 || world.getBlockId(x, y - 1, z) == Block.ICE.id || world.getBlockId(x, y - 1, z) == Block.LEAVES.id) {
             return false;
         }
         createTree(world, random, x, y, z, true);

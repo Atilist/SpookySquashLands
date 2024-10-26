@@ -1,6 +1,7 @@
 package net.danygames2014.spookysquashlands.feature;
 
 import net.danygames2014.spookysquashlands.listener.BlockListener;
+import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.Feature;
 
@@ -15,7 +16,7 @@ public class GiantPumpkinFeature extends Feature {
         if (random.nextInt(8) != 0) {
             return false;
         }
-        if (world.getBlockId(x, y - 1, z) == 0) {
+        if (world.getBlockId(x, y - 1, z) == 0 || world.getBlockId(x, y - 1, z) == Block.ICE.id || world.getBlockId(x, y - 1, z) == Block.LEAVES.id) {
             return false;
         }
         for (int offsetX = x - 1, i = 0; offsetX <= x + 1; offsetX++, i++) {
