@@ -1,12 +1,17 @@
 package net.danygames2014.spookysquashlands.entity;
 
+import net.danygames2014.spookysquashlands.SpookySquashLands;
 import net.minecraft.entity.mob.MonsterEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.World;
+import net.modificationstation.stationapi.api.server.entity.HasTrackingParameters;
+import net.modificationstation.stationapi.api.server.entity.MobSpawnDataProvider;
+import net.modificationstation.stationapi.api.util.Identifier;
+import net.modificationstation.stationapi.api.util.TriState;
 
-public class SpookyScarySkeletonEntity extends MonsterEntity {
+@HasTrackingParameters(updatePeriod = 2, sendVelocity = TriState.TRUE, trackingDistance = 50)
+public class SpookyScarySkeletonEntity extends MonsterEntity implements MobSpawnDataProvider {
     public ItemStack heldItem;
     
     public SpookyScarySkeletonEntity(World world) {
@@ -57,5 +62,10 @@ public class SpookyScarySkeletonEntity extends MonsterEntity {
     @Override
     public ItemStack getHeldItem() {
         return heldItem;
+    }
+
+    @Override
+    public Identifier getHandlerIdentifier() {
+        return SpookySquashLands.NAMESPACE.id("spooky_scary_skeleton");
     }
 }
