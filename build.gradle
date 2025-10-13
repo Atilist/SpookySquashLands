@@ -2,8 +2,8 @@
 //file:noinspection GroovyUnusedAssignment
 //file:noinspection ForeignDelegate
 plugins {
-    id 'fabric-loom' version '1.7.2'
-    id 'babric-loom-extension' version '1.7.4'
+    id 'fabric-loom' version '1.11.7'
+    id 'babric-loom-extension' version '1.8.9'
     id 'maven-publish'
 }
 
@@ -15,6 +15,11 @@ version = project.mod_version
 group = project.maven_group
 
 loom {
+    mixin {
+        useLegacyMixinAp = true
+    }
+    customMinecraftManifest.set("https://babric.github.io/manifest-polyfill/${minecraft_version}.json")
+    intermediaryUrl.set("https://maven.glass-launcher.net/babric/babric/intermediary/%1\$s/intermediary-%1\$s-v2.jar")
     accessWidenerPath = file("src/main/resources/spookysquashlands.accesswidener")
 }
 
@@ -79,9 +84,12 @@ dependencies {
 
     implementation "org.slf4j:slf4j-api:1.8.0-beta4"
     implementation "org.apache.logging.log4j:log4j-slf4j18-impl:2.17.2"
+    implementation "blue.endless:jankson:1.2.1"
     implementation "me.carleslc:Simple-Yaml:1.8.4"
 
-    modImplementation "net.modificationstation:StationAPI:${project.stapi_version}"
+    modImplementation ("net.modificationstation:StationAPI:${project.stapi_version}") {
+        exclude group: "babric", module: "fabric-loader"
+    }
 
     // Optional, but convenient mods for mod creators and users alike.
     modImplementation("net.glasslauncher.mods:ModMenu:${project.modmenu_version}") {
@@ -99,10 +107,6 @@ dependencies {
     modImplementation("net.glasslauncher.mods:AlwaysMoreItems:${project.alwaysmoreitems_version}") {
         transitive false
     }
-
-	modImplementation("com.github.matthewperiut:spc-babric:${project.spc_version}") {
-		transitive false
-	}
 
 	modImplementation("net.danygames2014:spawneggs:${project.spawneggs_version}") {
 		transitive false

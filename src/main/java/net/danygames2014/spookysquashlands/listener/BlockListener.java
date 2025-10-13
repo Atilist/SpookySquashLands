@@ -25,7 +25,7 @@ public class BlockListener {
     public static Block junglePumpkin;
 
     @Entrypoint.Namespace
-    public static final Namespace NAMESPACE = Null.get();
+    public static Namespace NAMESPACE = Null.get();
 
     @EventListener
     public void registerBlocks(BlockRegistryEvent event) {

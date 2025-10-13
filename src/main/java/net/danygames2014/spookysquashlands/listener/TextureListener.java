@@ -11,7 +11,7 @@ import net.modificationstation.stationapi.api.util.Null;
 public class TextureListener {
 
     @Entrypoint.Namespace
-    public static final Namespace NAMESPACE = Null.get();
+    public static Namespace NAMESPACE = Null.get();
 
     @EventListener
     public void registerTextures(TextureRegisterEvent event) {
