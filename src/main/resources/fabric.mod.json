@@ -17,6 +17,7 @@
     "stationapi:event_bus": [
       "net.danygames2014.spookysquashlands.SpookySquashLands",
       "net.danygames2014.spookysquashlands.listener.BlockListener",
+      "net.danygames2014.spookysquashlands.listener.RecipeListener",
       "net.danygames2014.spookysquashlands.listener.WorldGenListener",
       "net.danygames2014.spookysquashlands.listener.EntityListener"
     ],
