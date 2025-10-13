@@ -24,7 +24,7 @@ public class WorldGenListener {
 
         // Spooky Tundra
         SurfaceRule tundraSurface = SurfaceBuilder.start(BlockListener.solidIce).replace(Block.GRASS_BLOCK).build();
-        SurfaceRule tundraFilling = SurfaceBuilder.start(BlockListener.solidIce).replace(Block.STONE).build();
+        SurfaceRule tundraFilling = SurfaceBuilder.start(BlockListener.solidIce).ground(4).replace(Block.STONE).build();
 
         BiomeBuilder spookyBuilder;
         spookyBuilder = BiomeBuilder.start("Spooky Tundra");
