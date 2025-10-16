@@ -15,6 +15,8 @@ public class TextureListener {
 
     @EventListener
     public void registerTextures(TextureRegisterEvent event) {
+        String blocks = "block/";
+
         giantPumpkinFilling = getBlockTexture("block/giant_pumpkin_filling");
 
         giantPumpkinTopTopLeft = getBlockTexture("block/giant_pumpkin_top_top_left");
@@ -60,6 +62,10 @@ public class TextureListener {
         junglePumpkinTop = getBlockTexture("block/jungle_pumpkin_top");
         junglePumpkinSide = getBlockTexture("block/jungle_pumpkin_side");
         junglePumpkinBottom = getBlockTexture("block/jungle_pumpkin_bottom");
+
+        BlockListener.jungleLog.specifyTextures(getBlockTexture(blocks + "jungle_log_top"), getBlockTexture(blocks + "jungle_log_side"), getBlockTexture(blocks + "jungle_log_top"));
+        BlockListener.swampLog.specifyTextures(getBlockTexture(blocks + "swamp_log_top"), getBlockTexture(blocks + "swamp_log_side"), getBlockTexture(blocks + "swamp_log_top"));
+        BlockListener.plainsLog.specifyTextures(getBlockTexture(blocks + "plains_log_top"), getBlockTexture(blocks + "plains_log_side"), getBlockTexture(blocks + "plains_log_top"));
     }
 
     public int getBlockTexture(String path) {

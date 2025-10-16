@@ -5,4 +5,8 @@ tile.@.spike_pumpkin.name=Spike Pumpkin
 tile.@.frozen_pumpkin.name=Frozen Pumpkin
 tile.@.jungle_pumpkin.name=Jungle Pumpkin
 
+tile.@.jungle_log.name=Jungle Log
+tile.@.swamp_log.name=Swamp Log
+tile.@.plains_log.name=Plains Log
+
 tile.@.solid_ice.name=Solid Ice

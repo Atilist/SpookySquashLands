@@ -5,6 +5,10 @@
     "spookysquashlands:giant_pumpkin_bottom",
     "spookysquashlands:spike_pumpkin",
     "spookysquashlands:frozen_pumpkin",
-    "spookysquashlands:jungle_pumpkin"
+    "spookysquashlands:jungle_pumpkin",
+
+    "spookysquashlands:plains_log",
+    "spookysquashlands:swamp_log",
+    "spookysquashlands:jungle_log"
   ]
 }
