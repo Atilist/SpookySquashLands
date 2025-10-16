@@ -9,3 +9,13 @@ accessible field net/minecraft/world/gen/feature/LargeOakTreeFeature random Ljav
 accessible field net/minecraft/world/gen/feature/LargeOakTreeFeature maxTrunkHeight I
 accessible field net/minecraft/world/gen/feature/LargeOakTreeFeature MINOR_AXES [B
 accessible method net/minecraft/world/gen/feature/LargeOakTreeFeature placeCluster (IIIFBI)V
+accessible method net/minecraft/world/gen/feature/LargeOakTreeFeature placeFoliageCluster (III)V
+accessible field net/minecraft/world/gen/feature/LargeOakTreeFeature foliageClusterHeight I
+accessible method net/minecraft/world/gen/feature/LargeOakTreeFeature getClusterShape (I)F
+accessible method net/minecraft/world/gen/feature/LargeOakTreeFeature placeBranches ()V
+accessible method net/minecraft/world/gen/feature/LargeOakTreeFeature PlaceTrunk ()V
+accessible field net/minecraft/world/gen/feature/LargeOakTreeFeature trunkHeight I
+accessible method net/minecraft/world/gen/feature/LargeOakTreeFeature placeBranch ([I[II)V
+accessible field net/minecraft/world/gen/feature/LargeOakTreeFeature trunkWidth I
+accessible field net/minecraft/world/gen/feature/LargeOakTreeFeature branches [[I
+accessible method net/minecraft/world/gen/feature/LargeOakTreeFeature shouldPlaceBranch (I)Z

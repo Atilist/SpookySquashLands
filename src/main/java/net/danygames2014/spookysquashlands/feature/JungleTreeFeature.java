@@ -1,5 +1,6 @@
 package net.danygames2014.spookysquashlands.feature;
 
+import net.danygames2014.spookysquashlands.listener.BlockListener;
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.Feature;
@@ -22,7 +23,7 @@ public class JungleTreeFeature extends Feature {
     private void createTree(World world, Random random, int x, int y, int z, boolean firstStep) {
         int treeHeight = y + 8 + random.nextInt(12);
         for (int offsetY = y; offsetY <= treeHeight; offsetY++) {
-            world.setBlock(x, offsetY, z, Block.LOG.id);
+            world.setBlock(x, offsetY, z, BlockListener.jungleLog.id);
         }
         placeLeaves(world, random, x, treeHeight, z);
         for (int i = 0; i < 6 + random.nextInt(12); i++) {
@@ -31,7 +32,7 @@ public class JungleTreeFeature extends Feature {
             int branchZ = z + random.nextInt(17) - 8;
             int currentX = x, currentY = y + random.nextInt(treeHeight - 2 - y) + 2, currentZ = z;
             while (currentX != branchX || currentY != branchY || currentZ != branchZ) {
-                world.setBlock(currentX, currentY, currentZ, Block.LOG.id);
+                world.setBlock(currentX, currentY, currentZ, BlockListener.jungleLog.id);
                 if (currentX > branchX) {
                     currentX--;
                 } else if (currentX < branchX) {
@@ -64,7 +65,7 @@ public class JungleTreeFeature extends Feature {
                         if ((offsetX == x - 4 || offsetX == x + 4) && (offsetY == y - 1 || offsetY == y + 1) && (offsetZ == z - 4 || offsetZ == z + 4)) {
                             continue;
                         }
-                        world.setBlock(offsetX, offsetY, offsetZ, Block.LEAVES.id);
+                        world.setBlock(offsetX, offsetY, offsetZ, BlockListener.jungleLeaves.id);
                     }
                 }
             }

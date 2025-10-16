@@ -1,5 +1,6 @@
 package net.danygames2014.spookysquashlands.feature;
 
+import net.danygames2014.spookysquashlands.listener.BlockListener;
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.Feature;
@@ -20,7 +21,7 @@ public class LonelyOakTreeFeature extends Feature {
         }
         int treeHeight = y + 4 + random.nextInt(8);
         for (int offsetY = y; offsetY <= treeHeight; offsetY++) {
-            world.setBlock(x, offsetY, z, Block.LOG.id);
+            world.setBlock(x, offsetY, z, BlockListener.plainsLog.id);
         }
         placeLeaves(world, random, x, treeHeight, z);
         for (int i = 0; i < 6 + random.nextInt(12); i++) {
@@ -29,7 +30,7 @@ public class LonelyOakTreeFeature extends Feature {
             int branchZ = z + random.nextInt(17) - 8;
             int currentX = x, currentY = y + random.nextInt(treeHeight - y), currentZ = z;
             while (currentX != branchX || currentY != branchY || currentZ != branchZ) {
-                world.setBlock(currentX, currentY, currentZ, Block.LOG.id);
+                world.setBlock(currentX, currentY, currentZ, BlockListener.plainsLog.id);
                 if (currentX > branchX) {
                     currentX--;
                 } else if (currentX < branchX) {
@@ -60,7 +61,7 @@ public class LonelyOakTreeFeature extends Feature {
                         if ((offsetX == x - 2 || offsetX == x + 2) && (offsetY == y - 2 || offsetY == y + 2) && (offsetZ == z - 2 || offsetZ == z + 2)) {
                             continue;
                         }
-                        world.setBlock(offsetX, offsetY, offsetZ, Block.LEAVES.id);
+                        world.setBlock(offsetX, offsetY, offsetZ, BlockListener.plainsLeaves.id);
                     }
                 }
             }
