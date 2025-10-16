@@ -9,4 +9,8 @@ tile.@.jungle_log.name=Jungle Log
 tile.@.swamp_log.name=Swamp Log
 tile.@.plains_log.name=Plains Log
 
+tile.@.jungle_leaves.name=Jungle Leaves
+tile.@.swamp_leaves.name=Swamp Leaves
+tile.@.plains_leaves.name=Plains Leaves
+
 tile.@.solid_ice.name=Solid Ice

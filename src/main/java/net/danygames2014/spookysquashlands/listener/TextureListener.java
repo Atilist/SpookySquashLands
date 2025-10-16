@@ -66,6 +66,10 @@ public class TextureListener {
         BlockListener.jungleLog.specifyTextures(getBlockTexture(blocks + "jungle_log_top"), getBlockTexture(blocks + "jungle_log_side"), getBlockTexture(blocks + "jungle_log_top"));
         BlockListener.swampLog.specifyTextures(getBlockTexture(blocks + "swamp_log_top"), getBlockTexture(blocks + "swamp_log_side"), getBlockTexture(blocks + "swamp_log_top"));
         BlockListener.plainsLog.specifyTextures(getBlockTexture(blocks + "plains_log_top"), getBlockTexture(blocks + "plains_log_side"), getBlockTexture(blocks + "plains_log_top"));
+
+        BlockListener.jungleLeaves.specifyTextures(getBlockTexture(blocks + "jungle_leaves"));
+        BlockListener.swampLeaves.specifyTextures(getBlockTexture(blocks + "swamp_leaves"));
+        BlockListener.plainsLeaves.specifyTextures(getBlockTexture(blocks + "plains_leaves"));
     }
 
     public int getBlockTexture(String path) {
