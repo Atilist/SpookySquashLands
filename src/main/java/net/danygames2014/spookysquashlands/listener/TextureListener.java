@@ -70,6 +70,10 @@ public class TextureListener {
         BlockListener.jungleLeaves.specifyTextures(getBlockTexture(blocks + "jungle_leaves"));
         BlockListener.swampLeaves.specifyTextures(getBlockTexture(blocks + "swamp_leaves"));
         BlockListener.plainsLeaves.specifyTextures(getBlockTexture(blocks + "plains_leaves"));
+
+        BlockListener.junglePlanks.specifyTextures(getBlockTexture(blocks + "jungle_planks"));
+        BlockListener.swampPlanks.specifyTextures(getBlockTexture(blocks + "swamp_planks"));
+        BlockListener.plainsPlanks.specifyTextures(getBlockTexture(blocks + "plains_planks"));
     }
 
     public int getBlockTexture(String path) {

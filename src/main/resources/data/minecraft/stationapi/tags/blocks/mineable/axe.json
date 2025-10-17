@@ -9,6 +9,10 @@
 
     "spookysquashlands:plains_log",
     "spookysquashlands:swamp_log",
-    "spookysquashlands:jungle_log"
+    "spookysquashlands:jungle_log",
+
+    "spookysquashlands:plains_planks",
+    "spookysquashlands:swamp_planks",
+    "spookysquashlands:jungle_planks"
   ]
 }
