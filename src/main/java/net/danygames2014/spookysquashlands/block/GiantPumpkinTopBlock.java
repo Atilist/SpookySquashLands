@@ -27,7 +27,7 @@ public class GiantPumpkinTopBlock extends TemplateBlock {
 
     @Override
     public int getDroppedItemId(int blockMeta, Random random) {
-        return BlockListener.giantPumpkinMiddle.id;
+        return BlockListener.giantPumpkinMiddle.asItem().id;
     }
 
     public int getTexture(int side, int meta) {
