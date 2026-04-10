@@ -2,6 +2,7 @@ package net.danygames2014.spookysquashlands.listener;
 
 import net.mine_diver.unsafeevents.listener.EventListener;
 import net.minecraft.block.Block;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.modificationstation.stationapi.api.event.recipe.RecipeRegisterEvent;
 import net.modificationstation.stationapi.api.recipe.CraftingRegistry;
@@ -14,6 +15,9 @@ public class RecipeListener {
         Identifier type = event.recipeId;
         if (type == RecipeRegisterEvent.Vanilla.SMELTING.type()) {
             SmeltingRegistry.addSmeltingRecipe(BlockListener.solidIce.asItem().id, new ItemStack(Block.ICE));
+            SmeltingRegistry.addSmeltingRecipe(BlockListener.plainsLog.asItem().id, new ItemStack(Item.COAL, 1, 1));
+            SmeltingRegistry.addSmeltingRecipe(BlockListener.swampLog.asItem().id, new ItemStack(Item.COAL, 1, 1));
+            SmeltingRegistry.addSmeltingRecipe(BlockListener.jungleLog.asItem().id, new ItemStack(Item.COAL, 1, 1));
         }
         if (type == RecipeRegisterEvent.Vanilla.CRAFTING_SHAPELESS.type()) {
             CraftingRegistry.addShapelessRecipe(new ItemStack(BlockListener.junglePlanks, 4), new ItemStack(BlockListener.jungleLog));
