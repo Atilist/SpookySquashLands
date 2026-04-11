@@ -2,23 +2,28 @@
 //file:noinspection GroovyUnusedAssignment
 //file:noinspection ForeignDelegate
 plugins {
-    id 'fabric-loom' version '1.11.7'
-    id 'babric-loom-extension' version '1.8.9'
+    id 'fabric-loom' version '1.15.3'
+    id 'babric-loom-extension' version '1.15.3'
     id 'maven-publish'
 }
 
-sourceCompatibility = JavaVersion.VERSION_17
-targetCompatibility = JavaVersion.VERSION_17
+version = property("mod_version")
+group = property("maven_group")
 
-archivesBaseName = project.archives_base_name
-version = project.mod_version
-group = project.maven_group
+base {
+    archivesName = project.archives_base_name
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
 
 loom {
     mixin {
         useLegacyMixinAp = true
     }
-    customMinecraftManifest.set("https://babric.github.io/manifest-polyfill/${minecraft_version}.json")
     intermediaryUrl.set("https://maven.glass-launcher.net/babric/babric/intermediary/%1\$s/intermediary-%1\$s-v2.jar")
     accessWidenerPath = file("src/main/resources/spookysquashlands.accesswidener")
 }
@@ -80,7 +85,7 @@ dependencies {
     // To change the versions see the gradle.properties file
     minecraft "com.mojang:minecraft:${project.minecraft_version}"
     mappings "net.glasslauncher:biny:${project.yarn_mappings}:v2"
-    modImplementation "babric:fabric-loader:${project.loader_version}"
+    modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
 
     implementation "org.slf4j:slf4j-api:1.8.0-beta4"
     implementation "org.apache.logging.log4j:log4j-slf4j18-impl:2.17.2"
@@ -135,7 +140,7 @@ java {
 
 jar {
     from("LICENSE") {
-        rename { "${it}_${project.archivesBaseName}" }
+        rename { "${it}_${project.archives_base_name}" }
     }
 }
 
