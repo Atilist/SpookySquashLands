@@ -17,4 +17,8 @@ tile.@.jungle_planks.name=Jungle Planks
 tile.@.swamp_planks.name=Swamp Planks
 tile.@.plains_planks.name=Plains Planks
 
+tile.@.jungle_sapling.name=Jungle Sapling
+tile.@.plains_sapling.name=Plains Sapling
+tile.@.swamp_sapling.name=Swamp Sapling
+
 tile.@.solid_ice.name=Solid Ice

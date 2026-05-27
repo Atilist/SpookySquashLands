@@ -74,6 +74,14 @@ public class TextureListener {
         BlockListener.junglePlanks.specifyTextures(getBlockTexture(blocks + "jungle_planks"));
         BlockListener.swampPlanks.specifyTextures(getBlockTexture(blocks + "swamp_planks"));
         BlockListener.plainsPlanks.specifyTextures(getBlockTexture(blocks + "plains_planks"));
+
+        BlockListener.jungleSapling.specifyTextures(getBlockTexture(blocks + "jungle_sapling"));
+        BlockListener.swampSapling.specifyTextures(getBlockTexture(blocks + "swamp_sapling"));
+        BlockListener.plainsSapling.specifyTextures(getBlockTexture(blocks + "plains_sapling"));
+
+        BlockListener.jungleSapling.asItem().setTextureId(getBlockTexture(blocks + "jungle_sapling"));
+        BlockListener.swampSapling.asItem().setTextureId(getBlockTexture(blocks + "swamp_sapling"));
+        BlockListener.plainsSapling.asItem().setTextureId(getBlockTexture(blocks + "plains_sapling"));
     }
 
     public int getBlockTexture(String path) {
