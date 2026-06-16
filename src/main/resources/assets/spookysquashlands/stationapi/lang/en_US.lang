@@ -22,3 +22,5 @@ tile.@.plains_sapling.name=Plains Sapling
 tile.@.swamp_sapling.name=Swamp Sapling
 
 tile.@.solid_ice.name=Solid Ice
+
+entity.@.spooky_scary_skeleton.name=Skeleton
