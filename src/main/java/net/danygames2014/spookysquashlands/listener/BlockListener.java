@@ -41,13 +41,13 @@ public class BlockListener {
         giantPumpkinMiddle = new GiantPumpkinMiddleBlock(Identifier.of(NAMESPACE, "giant_pumpkin_middle"), Material.PUMPKIN).setHardness(1.5F).setSoundGroup(Block.WOOD_SOUND_GROUP);
         giantPumpkinBottom = new GiantPumpkinBottomBlock(Identifier.of(NAMESPACE, "giant_pumpkin_bottom"), Material.PUMPKIN).setHardness(1.5F).setSoundGroup(Block.WOOD_SOUND_GROUP);
         plainsLog = new LazyBlockTemplate(Identifier.of(NAMESPACE, "plains_log"), Material.WOOD, 1.5F, Block.WOOD_SOUND_GROUP);
-        plainsLeaves = new LazyLeavesTemplate(Identifier.of(NAMESPACE, "plains_leaves"), Material.LEAVES, 1.0F, Block.DIRT_SOUND_GROUP);
+        plainsLeaves = new LazyLeavesTemplate(Identifier.of(NAMESPACE, "plains_leaves"), Material.LEAVES, 0.5F, Block.DIRT_SOUND_GROUP);
         plainsPlanks = new LazyBlockTemplate(Identifier.of(NAMESPACE, "plains_planks"), Material.WOOD, 1.5F, Block.WOOD_SOUND_GROUP);
         plainsSapling = new LazySaplingTemplate(Identifier.of(NAMESPACE, "plains_sapling"), Material.PLANT, 0, Block.DIRT_SOUND_GROUP, new LonelyOakTreeFeature());
 
         spikePumpkin = new SpikePumpkinBlock(Identifier.of(NAMESPACE, "spike_pumpkin"), Material.PUMPKIN).setHardness(1.5F).setSoundGroup(Block.WOOD_SOUND_GROUP);
         swampLog = new LazyBlockTemplate(Identifier.of(NAMESPACE, "swamp_log"), Material.WOOD, 1.5F, Block.WOOD_SOUND_GROUP);
-        swampLeaves = new LazyLeavesTemplate(Identifier.of(NAMESPACE, "swamp_leaves"), Material.LEAVES, 1.0F, Block.DIRT_SOUND_GROUP);
+        swampLeaves = new LazyLeavesTemplate(Identifier.of(NAMESPACE, "swamp_leaves"), Material.LEAVES, 0.5F, Block.DIRT_SOUND_GROUP);
         swampPlanks = new LazyBlockTemplate(Identifier.of(NAMESPACE, "swamp_planks"), Material.WOOD, 1.5F, Block.WOOD_SOUND_GROUP);
         swampSapling = new LazySaplingTemplate(Identifier.of(NAMESPACE, "swamp_sapling"), Material.PLANT, 0, Block.DIRT_SOUND_GROUP, new SpookyLargeTree());
 
@@ -56,7 +56,7 @@ public class BlockListener {
 
         junglePumpkin = new JunglePumpkinBlock(Identifier.of(NAMESPACE, "jungle_pumpkin"), Material.PUMPKIN).setHardness(1.5F).setSoundGroup(Block.WOOD_SOUND_GROUP);
         jungleLog = new LazyBlockTemplate(Identifier.of(NAMESPACE, "jungle_log"), Material.WOOD, 1.5F, Block.WOOD_SOUND_GROUP);
-        jungleLeaves = new LazyLeavesTemplate(Identifier.of(NAMESPACE, "jungle_leaves"), Material.LEAVES, 1.0F, Block.DIRT_SOUND_GROUP);
+        jungleLeaves = new LazyLeavesTemplate(Identifier.of(NAMESPACE, "jungle_leaves"), Material.LEAVES, 0.5F, Block.DIRT_SOUND_GROUP);
         junglePlanks = new LazyBlockTemplate(Identifier.of(NAMESPACE, "jungle_planks"), Material.WOOD, 1.5F, Block.WOOD_SOUND_GROUP);
         jungleSapling = new LazySaplingTemplate(Identifier.of(NAMESPACE, "jungle_sapling"), Material.PLANT, 0, Block.DIRT_SOUND_GROUP, new JungleTreeFeature());
 
