@@ -1,9 +1,11 @@
 package net.danygames2014.spookysquashlands.block;
 
+import net.danygames2014.spookysquashlands.listener.ItemListener;
 import net.danygames2014.spookysquashlands.listener.TextureListener;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.modificationstation.stationapi.api.template.block.TemplateBlock;
 import net.modificationstation.stationapi.api.util.Identifier;
@@ -19,6 +21,10 @@ public class SpikePumpkinBlock extends TemplateBlock {
     @Override
     public void onBlockBreakStart(World world, int x, int y, int z, PlayerEntity player) {
         super.onBlockBreakStart(world, x, y, z, player);
+        ItemStack hand = player.getHand();
+        if (hand != null && hand.getItem() == ItemListener.swampAxe) {
+            return;
+        }
         player.damage(null, 4);
         double xLaunch = getLaunchingMultiplier(x, player.x) * LAUNCH_FACTOR;
         double zLaunch = getLaunchingMultiplier(z, player.z) * LAUNCH_FACTOR;

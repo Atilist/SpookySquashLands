@@ -22,3 +22,6 @@ tile.@.plains_sapling.name=Plains Sapling
 tile.@.swamp_sapling.name=Swamp Sapling
 
 tile.@.solid_ice.name=Solid Ice
+
+
+item.@.swamp_axe.name=Swamp Axe

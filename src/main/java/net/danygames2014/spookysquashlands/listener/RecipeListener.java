@@ -10,19 +10,24 @@ import net.modificationstation.stationapi.api.recipe.SmeltingRegistry;
 import net.modificationstation.stationapi.api.util.Identifier;
 
 public class RecipeListener {
+    private boolean addedRecipes = false;
+
     @EventListener
     public void registerRecipes(RecipeRegisterEvent event) {
         Identifier type = event.recipeId;
-        if (type == RecipeRegisterEvent.Vanilla.SMELTING.type()) {
-            SmeltingRegistry.addSmeltingRecipe(BlockListener.solidIce.asItem().id, new ItemStack(Block.ICE));
-            SmeltingRegistry.addSmeltingRecipe(BlockListener.plainsLog.asItem().id, new ItemStack(Item.COAL, 1, 1));
-            SmeltingRegistry.addSmeltingRecipe(BlockListener.swampLog.asItem().id, new ItemStack(Item.COAL, 1, 1));
-            SmeltingRegistry.addSmeltingRecipe(BlockListener.jungleLog.asItem().id, new ItemStack(Item.COAL, 1, 1));
+        if (addedRecipes) {
+            return;
         }
-        if (type == RecipeRegisterEvent.Vanilla.CRAFTING_SHAPELESS.type()) {
-            CraftingRegistry.addShapelessRecipe(new ItemStack(BlockListener.junglePlanks, 4), new ItemStack(BlockListener.jungleLog));
-            CraftingRegistry.addShapelessRecipe(new ItemStack(BlockListener.swampPlanks, 4), new ItemStack(BlockListener.swampLog));
-            CraftingRegistry.addShapelessRecipe(new ItemStack(BlockListener.plainsPlanks, 4), new ItemStack(BlockListener.plainsLog));
-        }
+        addedRecipes = true;
+        SmeltingRegistry.addSmeltingRecipe(BlockListener.solidIce.asItem().id, new ItemStack(Block.ICE));
+        SmeltingRegistry.addSmeltingRecipe(BlockListener.plainsLog.asItem().id, new ItemStack(Item.COAL, 1, 1));
+        SmeltingRegistry.addSmeltingRecipe(BlockListener.swampLog.asItem().id, new ItemStack(Item.COAL, 1, 1));
+        SmeltingRegistry.addSmeltingRecipe(BlockListener.jungleLog.asItem().id, new ItemStack(Item.COAL, 1, 1));
+
+        CraftingRegistry.addShapelessRecipe(new ItemStack(BlockListener.junglePlanks, 4), new ItemStack(BlockListener.jungleLog));
+        CraftingRegistry.addShapelessRecipe(new ItemStack(BlockListener.swampPlanks, 4), new ItemStack(BlockListener.swampLog));
+        CraftingRegistry.addShapelessRecipe(new ItemStack(BlockListener.plainsPlanks, 4), new ItemStack(BlockListener.plainsLog));
+
+        CraftingRegistry.addShapedRecipe(new ItemStack(ItemListener.swampAxe, 1), "ZX", "YX", "Y ", 'X', new ItemStack(BlockListener.swampPlanks), 'Y', new ItemStack(Item.STICK), 'Z', new ItemStack(Item.IRON_INGOT));
     }
 }

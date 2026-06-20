@@ -16,6 +16,7 @@ public class TextureListener {
     @EventListener
     public void registerTextures(TextureRegisterEvent event) {
         String blocks = "block/";
+        String items = "item/";
 
         giantPumpkinFilling = getBlockTexture("block/giant_pumpkin_filling");
 
@@ -82,6 +83,8 @@ public class TextureListener {
         BlockListener.jungleSapling.asItem().setTextureId(getBlockTexture(blocks + "jungle_sapling"));
         BlockListener.swampSapling.asItem().setTextureId(getBlockTexture(blocks + "swamp_sapling"));
         BlockListener.plainsSapling.asItem().setTextureId(getBlockTexture(blocks + "plains_sapling"));
+
+        ItemListener.swampAxe.setTexture(Identifier.of(NAMESPACE, items + "swamp_axe"));
     }
 
     public int getBlockTexture(String path) {
