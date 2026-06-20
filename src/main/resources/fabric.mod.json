@@ -28,7 +28,7 @@
     ]
   },
   "mixins": [
-    "template.mixins.json"
+    "spookysquashlands.mixins.json"
   ],
   "accessWidener": "spookysquashlands.accesswidener",
 
